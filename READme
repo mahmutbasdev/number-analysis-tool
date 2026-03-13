@@ -1,0 +1,42 @@
+# Number Analysis
+
+A Python application for analyzing a list of numbers. Enter numbers manually or import a CSV file to quickly generate basic statistical data.
+All calculations are done manually, without using essential built-in functions like min, max, sum, or round. This way, you can see exactly how each calculation is performed.
+
+# Functionaliteiten
+
+The program automatically calculates and displays:
+
+Average
+Median
+Highest and lowest numbers
+Count of even and odd numbers 
+
+Results are immediately exported to results.csv after analysis.
+
+
+#  How to use
+
+1. Open your terminal.
+
+2. Run the program with:
+
+python main.py
+
+Choose the input method:
+
+1 = Manual input (type stop to finish)
+
+2 = Import a CSV file
+
+Results appear in the terminal and are saved in results.csv.
+
+
+## About this project
+
+Writing Python functions and modular code
+
+Performing basic data analysis while showing exactly how calculations are done — no essential built-in functions are used for computing averages, medians, maximums, minimums, or counting even/odd numbers.
+
+Reading from and writing to CSV files
+
