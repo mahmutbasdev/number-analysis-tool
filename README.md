@@ -68,8 +68,6 @@ By implementing calculations without using built-in functions, it helps you unde
 
 ## What I Learned
 
-- Writing modular Python code using single-responsibility modules
-
 - Implementing basic statistics manually (average, median, max/min, even/odd counts)
 
 - Validating user input and handling exceptions
