@@ -1,42 +1,83 @@
 # Number Analysis
 
-A Python application for analyzing a list of numbers. Enter numbers manually or import a CSV file to quickly generate basic statistical data.
-All calculations are done manually, without using essential built-in functions like min, max, sum, or round. This way, you can see exactly how each calculation is performed.
+A Python project for analyzing lists of numbers. You can enter numbers manually or import them from a CSV file to calculate basic statistics.
 
-# Functionaliteiten
+## Features
 
-The program automatically calculates and displays:
+- Calculate average, median, highest, and lowest numbers
 
-Average
-Median
-Highest and lowest numbers
-Count of even and odd numbers 
+- Count even and odd numbers
 
-Results are immediately exported to results.csv after analysis.
+- Manual input or CSV import
+
+- Export results automatically to results.csv
+
+- All calculations done manually, no built-in functions for core statistics
 
 
-#  How to use
+Results are immediately exported to data/results.csv after analysis.
+If the file does not exist, it will be created automatically.
+
+## Usage
 
 1. Open your terminal.
 
-2. Run the program with:
+2. Run the analysis script from the project root:
 
-python main.py
+### Windows PowerShell
+```bash
+$env:PYTHONPATH="src"
+python -m scripts.run_analysis
+```
+### Linux/macOS
+```bash
+export PYTHONPATH=src
+python -m scripts.run_analysis
+```
+#### Input methods
 
-Choose the input method:
+1. Manual input – Type numbers, then type stop to finish.
 
-1 = Manual input (type stop to finish)
+2. CSV import – Select a CSV file containing numbers.
 
-2 = Import a CSV file
-
-Results appear in the terminal and are saved in results.csv.
+Results are printed in the terminal and automatically saved to results.csv.
 
 
-## About this project
+## Run Unit Tests
 
-Writing Python functions and modular code
+1. Open your terminal.
 
-Performing basic data analysis while showing exactly how calculations are done — no essential built-in functions are used for computing averages, medians, maximums, minimums, or counting even/odd numbers.
+2. Run the unittest from the project root:
 
-Reading from and writing to CSV files
+### Windows PowerShell
+```bash
+$env:PYTHONPATH="src"
+python -m unittest tests/test_calculate_median.py
+```
+
+### Linux/macOS
+```bash
+export PYTHONPATH=src
+python -m unittest tests/test_calculate_median.py
+```
+
+## Purpose
+
+This project serves as an introduction to data analysis with Python.
+By implementing calculations without using built-in functions, it helps you understand exactly how averages, medians, maxima/minima, and even/odd counts are computed.
+
+## What I Learned
+
+- Writing modular Python code using single-responsibility modules
+
+- Implementing basic statistics manually (average, median, max/min, even/odd counts)
+
+- Validating user input and handling exceptions
+
+- Reading from and writing to CSV files
+
+- Structuring a Python project clearly for reuse and testing
+
+- Writing and running unit tests to verify functionality
+
 
