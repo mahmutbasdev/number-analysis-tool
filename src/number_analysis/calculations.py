@@ -41,7 +41,39 @@ def calculate_median(numbers):
     else:
         median = round(median, 2)
 
-    return median
+    return median, sorted_numbers
+
+def calculate_Q1(numbers):
+    """Return the Q1 of a list of numbers."""
+    if not numbers:
+        return None
+
+    _, sorted_numbers = calculate_median(numbers)
+
+    mid_index = len(sorted_numbers) // 2
+    lower_half = sorted_numbers[:mid_index]
+
+    q1,_ = calculate_median(lower_half)
+    return q1
+
+
+def calculate_Q3(numbers):
+    """Return the Q3 of a list of numbers."""
+    if not numbers:
+        return None
+
+    _, sorted_numbers = calculate_median(numbers)
+
+    mid_index = len(sorted_numbers) // 2
+    upper_half = sorted_numbers[mid_index:]
+    
+    if len(numbers) % 2 == 0:
+        upper_half = sorted_numbers[mid_index:]
+    else:
+        upper_half = sorted_numbers[mid_index + 1]
+        
+    q3, _ = calculate_median(upper_half)
+    return q3
 
 
 # --- Find highest number ---
@@ -81,15 +113,19 @@ def count_even_odd(numbers):
 
 # --- Generate summary ---
 def generate_summary(numbers):
-    """Return a dictionary summary with average, median, highest, lowest, even, and odd counts."""
+    """Return a dictionary summary with average, Q1, median, highest, lowest, even, and odd counts."""
     average = calculate_average(numbers)
-    median = calculate_median(numbers)
+    median,_ = calculate_median(numbers)
+    q1 = calculate_Q1(numbers)
+    q3 = calculate_Q3(numbers)
     highest = find_highest(numbers)
     lowest = find_lowest(numbers)
     even_count, odd_count = count_even_odd(numbers)
 
     return {
         "average": average,
+        "q1": q1,
+        "q3": q3,
         "median": median,
         "highest": highest,
         "lowest": lowest,

@@ -4,7 +4,7 @@ A Python project for analyzing lists of numbers. You can enter numbers manually 
 
 ## Features
 
-- Calculate average, median, highest, and lowest numbers
+- Calculate average, median, Q1, Q3 highest, and lowest numbers
 
 - Count even and odd numbers
 
