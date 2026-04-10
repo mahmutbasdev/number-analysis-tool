@@ -14,7 +14,6 @@ A Python project for analyzing lists of numbers. You can enter numbers manually 
 
 - All calculations done manually, no built-in functions for core statistics
 
-
 Results are immediately exported to data/results.csv after analysis.
 If the file does not exist, it will be created automatically.
 
